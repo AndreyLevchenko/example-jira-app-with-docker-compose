@@ -5,7 +5,7 @@ services:
   jira:
     build: ./.docker
     environment:
-      - JVM_SUPPORT_RECOMMENDED_ARGS=-Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -Dquickreload.dirs=/plugin
+      - JVM_SUPPORT_RECOMMENDED_ARGS=-Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -Dquickreload.dirs=/plugin
     ports:
       - 5005:5005
       - 8080:8080
